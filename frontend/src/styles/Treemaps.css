@@ -1,0 +1,75 @@
+.treemap-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  color: #e0e0e0;
+  background-color: #1f1f2e;
+}
+
+.treemap-container h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.treemap-container .subtitle {
+  font-size: 1.125rem;
+  color: #9ca3af;
+  margin-bottom: 2rem;
+}
+
+/* Grid layout */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Card design */
+.card {
+  background-color: #2a2a3b;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
+}
+
+.card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #f0f0f0;
+}
+
+/* Image container */
+.image-container {
+  width: 100%;
+  max-height: 400px;
+  overflow: auto;
+  padding: 0.25rem 0;
+}
+
+.treemap-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 768px) {
+  .card {
+    padding: 1rem;
+  }
+  .treemap-container h2 {
+    font-size: 1.75rem;
+  }
+}

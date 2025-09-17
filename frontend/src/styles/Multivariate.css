@@ -1,0 +1,229 @@
+.multivariate-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  color: #e0e0e0;
+  background-color: #1f1f2e; /* dark theme */
+}
+
+/* Headings */
+.multivariate-container h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.multivariate-container .subtitle {
+  font-size: 1.125rem;
+  color: #9ca3af;
+  margin-bottom: 1rem;
+}
+
+/* Grid layout */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Card design */
+.card {
+  background-color: #2a2a3b;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.7);
+}
+
+.card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #f0f0f0;
+}
+
+/* Image container */
+.image-container {
+  width: 100%;
+  max-height: 400px;
+  overflow: auto;
+  padding: 0.25rem 0;
+  border-radius: 8px;
+}
+
+.multi-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.multi-image:hover {
+  transform: scale(1.03);
+}
+
+/* AI Guide Toggle */
+.ai-explainer-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem 0;
+}
+
+.ai-toggle-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.ai-toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+/* Floating AI Card */
+.home-ai-explainer-card {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 380px;
+  max-height: 70vh;
+  background: #2a2a3b;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1rem;
+  overflow-y: auto;
+  animation: fadeIn 0.4s ease-out;
+  z-index: 1000;
+}
+
+.ai-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.ai-card-header h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.ai-close-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.ai-close-btn:hover {
+  color: #ff5f5f;
+}
+
+.ai-card-content {
+  color: #d1d5db;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .card {
+    padding: 1rem;
+  }
+
+  .multivariate-container h2 {
+    font-size: 1.75rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-toggle-btn {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  .home-ai-explainer-card {
+    width: 95%;
+    right: 2.5%;
+    bottom: 1rem;
+  }
+}
+
+/* Scrollbar styling */
+.image-container::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.image-container::-webkit-scrollbar-track {
+  background: #2a2a3b;
+  border-radius: 3px;
+}
+
+.image-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 3px;
+}
+
+.image-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Title row with button */
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.title-row h2 {
+  margin: 0;
+}
